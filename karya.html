@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Karya Gue</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Karya Gue</h1>
+    <p>Beberapa project yang udah gue kerjain</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="tentang.html">Tentang</a></li>
+      <li><a href="kontak.html">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="card">
+      <h2>📶 Konfigurasi Blokir Akses Website</h2>
+      <p>Konfigurasi firewall di Mikrotik untuk memblokir akses ke situs tertentu (misalnya situs sosial media atau konten gak penting). Gue manfaatin 
+        fitur Layer 7 Protocol dan Firewall Filter Rules buat ngefilter berdasarkan keyword/URL.</p>
+      <img src="facebook-blok.png" alt="blok situs" class="karya-gambar" />
+    </section>
+
+    <section class="card">
+      <h2>💻 Website HTML Pertama</h2>
+      <p>Ini adalah website pertama yang gue buat waktu mulai belajar HTML & CSS. Tujuannya buat latihan dasar-dasar struktur HTML, elemen dasar, dan styling pake CSS. 
+        Walaupun masih simpel, web ini jadi awal gue buat ngembangin skill web development ke tahap selanjutnya.
+      </p>
+      <img src="web1.PNG" alt="Website Pertama" class="karya-gambar" />
+    </section>
+
+    <section class="card">
+      <h2>🚀 Website Portofolio Ini</h2>
+      <p>Yep, website yang lo buka sekarang juga bagian dari karya gue. Dibuat pake HTML + CSS, plus animasi biar ga monoton.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Portofolio wildan. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const cards = document.querySelectorAll('.card');
+
+    function revealOnScroll() {
+      const windowHeight = window.innerHeight;
+      const revealPoint = 150;
+
+      cards.forEach(card => {
+        const cardTop = card.getBoundingClientRect().top;
+
+        if (cardTop < windowHeight - revealPoint) {
+          card.classList.add('show');
+        } else {
+          card.classList.remove('show');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
+  </script>
+</body>
+</html>

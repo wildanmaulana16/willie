@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tentang Gue</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Tentang Gue</h1>
+    <p>Kenalan dulu lah sebelum liat karya gue 😎</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="karya.html">Karya</a></li>
+      <li><a href="kontak.html">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="card">
+      <h2>Siapa Gue?</h2>
+      <p>Nama gue Wildan Maulana. Gue siswa kelas X yang lumayan suka ngoding. Masih pemula sih, tapi niat belajar gue ga main-main.</p>
+    </section>
+
+    <section class="card">
+      <h2>Minat & Hobi</h2>
+      <ul>
+        <li>Ngoding web (HTML, CSS, soon JS)</li>
+        <li>Dengerin musik, main game, dan gue juga suka (dikit") koleksi diecast mobil 🏎️</li>
+        <li>Ngulik desain UI/UX</li>
+        <li>Jalan-jalan santai biar gak stress</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Target Gue</h2>
+      <p>Gue pengen bisa bikin website keren yang gak cuma bagus di mata orang, tapi juga clean di kodenya. Tujuan akhirnya? Bisa freelance atau bikin produk sendiri yang dipake banyak orang 💪</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Portofolio wildan. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const cards = document.querySelectorAll('.card');
+
+    function revealOnScroll() {
+      const windowHeight = window.innerHeight;
+      const revealPoint = 150;
+
+      cards.forEach(card => {
+        const cardTop = card.getBoundingClientRect().top;
+
+        if (cardTop < windowHeight - revealPoint) {
+          card.classList.add('show');
+        } else {
+          card.classList.remove('show');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
+  </script>
+</body>
+</html>

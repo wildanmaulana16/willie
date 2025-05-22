@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak - Portofolio Gue</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>kontak Gue</h1>
+    <p>yakin ga kepo 😎</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="tentang.html">Tentang</a></li>
+      <li><a href="karya.html">Karya</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="card">
+      <h2>Form Kontak</h2>
+      <section id="kontak" class="card">
+      <h2>👀</h2>
+      <p>IG gue: <a href="https://instagram.com/wiillddaann_" target="_blank">@wiillddaann_</a></p>
+      <p>Email gue: wildanthe1975@gmail.com</p>
+    </section>
+       kalau ada yang mau di tanyain chat aja, lewat kontak di atas😄
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Portofolio wildan. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Animasi scroll muncul
+    const cards = document.querySelectorAll('.card');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    cards.forEach(card => observer.observe(card));
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PORTOFOLIO Gue</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Halo, welcome to my website</h1>
+    <p>it's my portofolio website</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="tentang.html">tentang gue</a></li>
+      <li><a href="karya.html">Karya</a></li>
+      <li><a href="kontak.html">Kontak</a></li>
+  </nav>
+
+  <main>
+    <section id="tentang" class="card">
+      <h2>Tentang Gue</h2>
+      <p>Gue siswa kelas X TKJ, KALAU MAU TAU LEBIH LANJUT KLIK YANG DI ATAS!!</p>
+    </section>
+
+    <section id="karya" class="card">
+      <h2>Karya</h2>
+      <ul>
+        <li>Mikrotik</li>
+        <li>Project HTML pertama gue</li>
+        <li>website</li>
+      </ul>
+    </section>
+
+    <section id="kontak" class="card">
+      <h2>Kontak</h2>
+      <p>Kalau lo penasaran lebih lanjut dan ada yang ingin di sampai kan atau hanya sekedar 
+        tanya tanya bisa klik kontak di atas👀
+      </a></p>
+    </section>
+
+    <section id="note" class="card">
+      <h2>Note</h2>
+      <p>KALAU MAU TAU LEBIH LANJUT SIAPA DAN APA AJA KARYA GUE, BISA KLIK AJA IKON YANG DI ATAS SESUAI
+        DENGAN APA YANG INGIN KALIAN KETAHUI.
+      </a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Portofolio wildan. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const cards = document.querySelectorAll('.card');
+
+    function revealOnScroll() {
+      const windowHeight = window.innerHeight;
+      const revealPoint = 150;
+
+      cards.forEach(card => {
+        const cardTop = card.getBoundingClientRect().top;
+
+        if(cardTop < windowHeight - revealPoint) {
+          card.classList.add('show');
+        } else {
+          card.classList.remove('show');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
+  </script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0a3d62, #74b9ff);
+  color: #fff; /* tulisan putih semua */
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 40px 20px 20px;
+}
+
+header h1 {
+  font-size: 3rem;
+  color: #fff; /* putih */
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff; /* putih */
+}
+
+/* Nav */
+nav {
+  background: #0984e3; /* biru terang */
+  padding: 15px 0;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 600px;
+  box-shadow: 0 0 10px rgba(9,132,227,0.6);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+nav a {
+  color: #fff; /* putih */
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #74b9ff; /* biru muda */
+}
+
+/* Main & cards */
+main {
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(10, 61, 98, 0.4);
+  transform: translateY(50px);
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  color: #fff; /* putih semua tulisan di card */
+}
+
+.card.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  box-shadow: 0 10px 25px rgba(9,132,227,0.7);
+}
+
+/* Headings */
+.card h2 {
+  color: #fff; /* putih */
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+
+/* Lists */
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+/* Links */
+a {
+  color: #bbe1ff; /* biru muda biar keliatan di putih */
+}
+
+a:hover {
+  color: #74b9ff;
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  color: #fff;
+  border-top: 1px solid rgba(255,255,255,0.3);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+/* Form Kontak */
+.form-kontak {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.form-kontak label {
+  font-weight: 700;
+  color: #fff;
+}
+
+.form-kontak input,
+.form-kontak textarea {
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  resize: vertical;
+  transition: background-color 0.3s ease;
+}
+
+.form-kontak input::placeholder,
+.form-kontak textarea::placeholder {
+  color: #d0d0d0;
+}
+
+.form-kontak input:focus,
+.form-kontak textarea:focus {
+  background-color: rgba(255, 255, 255, 0.4);
+  outline: none;
+}
+
+.form-kontak button {
+  padding: 12px 20px;
+  background-color: #0984e3;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-kontak button:hover {
+  background-color: #74b9ff;
+}
+.card img {
+  max-width: 50%;
+  height: auto;
+  display: block;
+  margin: 15px auto 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
